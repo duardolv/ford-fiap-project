@@ -42,7 +42,8 @@ const secondary: MantineColorsTuple = [
 export const theme = createTheme({
   primaryColor: "main",
   primaryShade: 5,
-  fontFamily: "Poppins, sans-serif",
+  fontFamily:
+    'Antenna, Arial, Helvetica, "Microsoft YaHei", "微软雅黑", "STXihei", "华文细黑", "SimSun", "宋体", sans-serif',
   cursorType: "pointer",
   defaultRadius: "xs",
 
@@ -69,7 +70,8 @@ export const theme = createTheme({
   },
 
   headings: {
-    fontFamily: "Poppins, sans-serif",
+    fontFamily:
+      'Antenna, Arial, Helvetica, "Microsoft YaHei", "微软雅黑", "STXihei", "华文细黑", "SimSun", "宋体", sans-serif',
     sizes: {
       h1: {
         fontSize: rem("36px"),

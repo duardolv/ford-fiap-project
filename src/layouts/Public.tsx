@@ -18,7 +18,7 @@ function Public() {
   return (
     <>
       <Header />
-      <Container size="1800px">
+      <Container size="xl" p={0}>
         <Outlet />
       </Container>
     </>

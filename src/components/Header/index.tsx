@@ -69,7 +69,7 @@ export default function HeaderMenu() {
 
   return (
     <header className={classes.header}>
-      <Container size="1800px">
+      <Container size="xl">
         <div className={classes.inner}>
           <Center component="a" href="/">
             <FordLogo size={100} />
