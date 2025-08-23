@@ -1,9 +1,10 @@
 import { IconChevronDown } from "@tabler/icons-react";
-import { Burger, Button, Center, Container, Group, Menu } from "@mantine/core";
+import { Burger, Button, Center, Container, Group, Menu, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import FordLogo from "@/logo";
 import classes from "./Header.module.css";
 import ColorSchemeToggle from "../ThemeToggle";
+import { Link } from "react-router-dom";
 
 const links = [
   { link: "/features", label: "Funcionalidades" },
@@ -71,7 +72,9 @@ export default function HeaderMenu() {
     <header className={classes.header}>
       <Container size="1800px">
         <div className={classes.inner}>
-          <FordLogo size={100} />
+          <Center component="a" href="/">
+            <FordLogo size={100} />
+          </Center>
 
           <Group gap="md" visibleFrom="md">
             {items}
