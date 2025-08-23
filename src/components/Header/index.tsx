@@ -87,7 +87,7 @@ export default function HeaderMenu() {
               variant="gradient"
               size="sm"
               component="a"
-              href="/workspace"
+              href="/"
             >
               Traduzir Agora
             </Button>

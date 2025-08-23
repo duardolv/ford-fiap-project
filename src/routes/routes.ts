@@ -13,6 +13,21 @@ export const RoutePaths = Object.freeze({
     signIn: "/sign-in",
     forgotPassword: "/forgot-password",
   }),
+  features: "/features",
+  learn: {
+    main: "#learn",
+    examples: "/examples",
+    guide: "/guide",
+    bestPractices: "/best-practices",
+  },
+  about: "/about",
+  roadmap: "/roadmap",
+  support: {
+    main: "#support",
+    faq: "/faq",
+    demo: "/demo",
+    help: "/help",
+  },
 }) satisfies RoutePathsType;
 
 export type AllPaths = LeafRoutes<typeof RoutePaths>;
