@@ -1,10 +1,9 @@
 import { IconChevronDown } from "@tabler/icons-react";
-import { Burger, Button, Center, Container, Group, Menu, Text } from "@mantine/core";
+import { Burger, Button, Center, Container, Group, Menu } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import FordLogo from "@/logo";
 import classes from "./Header.module.css";
 import ColorSchemeToggle from "../ThemeToggle";
-import { Link } from "react-router-dom";
 
 const links = [
   { link: "/features", label: "Funcionalidades" },
