@@ -1,30 +1,36 @@
 import { IconChevronDown } from "@tabler/icons-react";
-import { Burger, Center, Container, Group, Menu } from "@mantine/core";
+import {
+  Burger,
+  Button,
+  Center,
+  Container,
+  Group,
+  Menu,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import ForgLogo from "@/logo";
+import FordLogo from "@/logo";
 import classes from "./Header.module.css";
 
 const links = [
-  { link: "/about", label: "Recursos" },
+  { link: "/features", label: "Funcionalidades" },
   {
-    link: "#1",
+    link: "#learn",
     label: "Aprender",
     links: [
-      { link: "/docs", label: "Documentação" },
-      { link: "/resources", label: "Materiais" },
-      { link: "/community", label: "Comunidade" },
-      { link: "/blog", label: "Blog" },
+      { link: "/examples", label: "Exemplos de Tradução" },
+      { link: "/guide", label: "Guia de Uso" },
+      { link: "/best-practices", label: "Boas Práticas" },
     ],
   },
   { link: "/about", label: "Sobre" },
-  { link: "/pricing", label: "Preços" },
+  { link: "/roadmap", label: "Roadmap" },
   {
-    link: "#2",
+    link: "#support",
     label: "Suporte",
     links: [
-      { link: "/faq", label: "Perguntas frequentes" },
-      { link: "/demo", label: "Agendar demonstração" },
-      { link: "/forums", label: "Fórum" },
+      { link: "/faq", label: "Perguntas Frequentes" },
+      { link: "/demo", label: "Agendar Demonstração" },
+      { link: "/help", label: "Central de Ajuda" },
     ],
   },
 ];
@@ -34,7 +40,9 @@ export default function HeaderMenu() {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <Menu.Item key={item.link} component="a" href={item.link}>
+        {item.label}
+      </Menu.Item>
     ));
 
     if (menuItems) {
@@ -46,11 +54,7 @@ export default function HeaderMenu() {
           withinPortal
         >
           <Menu.Target>
-            <a
-              href={link.link}
-              className={classes.link}
-              onClick={(event) => event.preventDefault()}
-            >
+            <a href={link.link} className={classes.link}>
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
                 <IconChevronDown size={14} stroke={1.5} />
@@ -63,12 +67,7 @@ export default function HeaderMenu() {
     }
 
     return (
-      <a
-        key={link.label}
-        href={link.link}
-        className={classes.link}
-        onClick={(event) => event.preventDefault()}
-      >
+      <a key={link.label} href={link.link} className={classes.link}>
         {link.label}
       </a>
     );
@@ -78,11 +77,23 @@ export default function HeaderMenu() {
     <header className={classes.header}>
       <Container size="1800px">
         <div className={classes.inner}>
-          <ForgLogo size={100} />
-          <Group gap={5} visibleFrom="sm">
+          <FordLogo size={100} />
+
+          <Group gap="md" visibleFrom="md">
             {items}
+            <Button
+              radius="md"
+              gradient={{ from: "#003478", to: "blue" }}
+              variant="gradient"
+              size="sm"
+              component="a"
+              href="/workspace"
+            >
+              Traduzir Agora
+            </Button>
           </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+
+          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="md" />
         </div>
       </Container>
     </header>

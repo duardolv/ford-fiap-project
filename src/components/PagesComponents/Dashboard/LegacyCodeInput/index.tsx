@@ -1,6 +1,6 @@
 import { Button, Card, Stack, Textarea, Title } from "@mantine/core";
 import { IconCode } from "@tabler/icons-react";
-import styles from '../Dashboard.module.css'
+import styles from "../Dashboard.module.css";
 
 interface LegacyCodeInputProps {
   onTranslate?: () => void;
@@ -8,7 +8,13 @@ interface LegacyCodeInputProps {
 
 export function LegacyCodeInput({ onTranslate }: LegacyCodeInputProps) {
   return (
-    <Card withBorder shadow="lg" radius="lg" p="lg" className={styles.hover_card}>
+    <Card
+      withBorder
+      shadow="lg"
+      radius="lg"
+      p="lg"
+      className={styles.hover_card}
+    >
       <Stack gap="sm">
         <Title order={4} c="blue.7">
           Código Legado
@@ -22,7 +28,7 @@ export function LegacyCodeInput({ onTranslate }: LegacyCodeInputProps) {
           fullWidth
           size="md"
           radius="md"
-          gradient={{ from: "blue", to: "cyan" }}
+          gradient={{ from: "#003478", to: "blue" }}
           variant="gradient"
           leftSection={<IconCode size={18} />}
           onClick={onTranslate}

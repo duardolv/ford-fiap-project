@@ -9,8 +9,13 @@ import {
   Tabs,
   Title,
 } from "@mantine/core";
-import { IconCode, IconCopy, IconDownload, IconChecks } from "@tabler/icons-react";
-import styles from '../Dashboard.module.css'
+import {
+  IconCode,
+  IconCopy,
+  IconDownload,
+  IconChecks,
+} from "@tabler/icons-react";
+import styles from "../Dashboard.module.css";
 
 interface ResultTabsProps {
   modernCode: string;
@@ -19,7 +24,13 @@ interface ResultTabsProps {
 
 export function ResultTabs({ modernCode, testCode }: ResultTabsProps) {
   return (
-    <Card withBorder shadow="lg" radius="lg" p="lg" className={styles.hover_card}>
+    <Card
+      withBorder
+      shadow="lg"
+      radius="lg"
+      p="lg"
+      className={styles.hover_card}
+    >
       <Stack gap="md">
         <Title order={4} c="blue.7">
           Resultado
@@ -58,7 +69,7 @@ export function ResultTabs({ modernCode, testCode }: ResultTabsProps) {
           </Button>
           <Button
             radius="md"
-            gradient={{ from: "blue", to: "cyan" }}
+            gradient={{ from: "#003478", to: "blue" }}
             variant="gradient"
             leftSection={<IconDownload size={18} />}
           >
