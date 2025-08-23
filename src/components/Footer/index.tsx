@@ -1,27 +1,37 @@
-import { Anchor, Group, Stack, Text } from "@mantine/core";
+import {
+  Anchor,
+  Group,
+  Stack,
+  Text,
+  useMantineColorScheme,
+} from "@mantine/core";
 import FordLogo from "@/logo";
 
 export default function FooterBar() {
+  const { colorScheme } = useMantineColorScheme();
+
   return (
-    <Stack
-      style={{
-        width: "100%",
-        padding: "1.5rem 0",
-        borderTop: "1px solid rgba(0,52,120,0.15)",
-        backgroundColor: "rgba(255,255,255,0.95)",
-      }}
-    >
-      <Stack align="center" gap="sm">
+    <Stack w="100%" py={16}>
+      <Stack align="center" gap="sm" h={100}>
         <FordLogo size={36} />
         <Text size="sm" c="dimmed">
-          © {new Date().getFullYear()} Ford Code Translator. Todos os direitos reservados.
+          © {new Date().getFullYear()} Ford Code Translator. Todos os direitos
+          reservados.
         </Text>
 
-        <Group gap="md">
-          <Anchor href="/features" c="blue">Funcionalidades</Anchor>
-          <Anchor href="/about" c="blue">Sobre</Anchor>
-          <Anchor href="/roadmap" c="blue">Roadmap</Anchor>
-          <Anchor href="/help" c="blue">Suporte</Anchor>
+        <Group gap="md" c={colorScheme === "dark" ? "#0072ce" : "main"}>
+          <Anchor href="/features" c="inherit">
+            Funcionalidades
+          </Anchor>
+          <Anchor href="/about" c="inherit">
+            Sobre
+          </Anchor>
+          <Anchor href="/roadmap" c="inherit">
+            Roadmap
+          </Anchor>
+          <Anchor href="/help" c="inherit">
+            Suporte
+          </Anchor>
         </Group>
       </Stack>
     </Stack>

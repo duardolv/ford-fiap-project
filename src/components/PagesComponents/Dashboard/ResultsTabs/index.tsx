@@ -8,6 +8,7 @@ import {
   Stack,
   Tabs,
   Title,
+  useMantineColorScheme,
 } from "@mantine/core";
 import {
   IconCode,
@@ -23,6 +24,8 @@ interface ResultTabsProps {
 }
 
 export function ResultTabs({ modernCode, testCode }: ResultTabsProps) {
+  const { colorScheme } = useMantineColorScheme();
+
   return (
     <Card
       withBorder
@@ -64,7 +67,12 @@ export function ResultTabs({ modernCode, testCode }: ResultTabsProps) {
         </Tabs>
 
         <Group justify="space-between" mt="sm">
-          <Button variant="light" leftSection={<IconCopy size={18} />}>
+          <Button
+            color={colorScheme === "dark" ? "#0072ce" : "main"}
+            variant="light"
+            radius="md"
+            leftSection={<IconCopy size={18} />}
+          >
             Copiar
           </Button>
           <Button

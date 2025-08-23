@@ -1,7 +1,17 @@
-import { Group, Highlight, rem, Text, ThemeIcon, Title } from "@mantine/core";
+import {
+  Group,
+  Highlight,
+  rem,
+  Text,
+  ThemeIcon,
+  Title,
+  useMantineColorScheme,
+} from "@mantine/core";
 import FordLogo from "@/logo";
 
 export function HeaderSection() {
+  const { colorScheme } = useMantineColorScheme();
+
   return (
     <>
       <Group justify="center">
@@ -14,9 +24,9 @@ export function HeaderSection() {
         order={1}
         ta="center"
         fw={900}
+        c={colorScheme === "dark" ? "#0072ce" : "main"}
         style={{
           fontSize: rem(38),
-          color: "#003478",
         }}
       >
         Ford <Highlight highlight="Code Translator">Code Translator</Highlight>
@@ -24,8 +34,8 @@ export function HeaderSection() {
 
       <Text ta="center" size="lg" c="dimmed" maw={600} mx="auto">
         Converta <strong>códigos legados</strong> em versões modernas em{" "}
-        <span style={{ color: "#003478", fontWeight: 700 }}>JavaScript</span> com
-        testes automatizados criados por IA.
+        <Text span c={colorScheme === "dark" ? "#0072ce" : "main"} style={{  fontWeight: 700 }}>JavaScript</Text>{" "}
+        com testes automatizados criados por IA.
       </Text>
     </>
   );

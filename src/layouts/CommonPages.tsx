@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <AppShell
       header={{ height: 70 }}
-      footer={{ height: 60 }}
+      footer={{ height: 135 }}
       padding="md"
     >
 
