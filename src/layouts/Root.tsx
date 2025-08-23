@@ -15,7 +15,7 @@ export const Root = () => {
   //   }
 
   return (
-    <Box bg="#FDFCFA" h="100vh">
+    <Box>
       <Outlet />
     </Box>
   );

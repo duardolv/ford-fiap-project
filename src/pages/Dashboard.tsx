@@ -1,7 +1,7 @@
-import { Title } from "@mantine/core";
+import DashboardComponents from "@/components/PagesComponents/Dashboard";
 
-function Dashboard(){
-    return(<Title>Dashboard</Title>)
+function Dashboard() {
+  return <DashboardComponents />;
 }
 
 export default Dashboard;

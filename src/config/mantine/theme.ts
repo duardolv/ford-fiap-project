@@ -47,7 +47,7 @@ export const theme = createTheme({
   defaultRadius: "xs",
 
   colors: {
-    main: colorsTuple("#EF8600"),
+    main: colorsTuple("#003478"),
     brand,
     secondary,
   },
