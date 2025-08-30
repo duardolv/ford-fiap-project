@@ -6,11 +6,15 @@ import {
   ThemeIcon,
   Title,
   useMantineColorScheme,
+  Button,
 } from "@mantine/core";
+import { IconRocket } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 import FordLogo from "@/logo";
 
 export function HeaderSection() {
   const { colorScheme } = useMantineColorScheme();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -37,6 +41,18 @@ export function HeaderSection() {
         <Text span c={colorScheme === "dark" ? "#0072ce" : "main"} style={{  fontWeight: 700 }}>JavaScript</Text>{" "}
         com testes automatizados criados por IA.
       </Text>
+
+      <Group justify="center" mt="md">
+        <Button
+          leftSection={<IconRocket size={16} />}
+          size="lg"
+          variant="gradient"
+          gradient={{ from: 'blue', to: 'cyan', deg: 45 }}
+          onClick={() => navigate('/code-lift')}
+        >
+          🚀 Experimentar CodeLift
+        </Button>
+      </Group>
     </>
   );
 }
