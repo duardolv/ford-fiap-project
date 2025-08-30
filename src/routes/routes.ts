@@ -14,6 +14,7 @@ export const RoutePaths = Object.freeze({
     forgotPassword: "/forgot-password",
   }),
   features: "/features",
+  codeLift: "/code-lift",
   learn: {
     main: "#learn",
     examples: "/examples",

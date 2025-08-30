@@ -15,6 +15,7 @@ import FeaturesPage from "@/pages/Features";
 import GuidePage from "@/pages/Guide";
 import HelpPage from "@/pages/Help";
 import RoadmapPage from "@/pages/Roadmap";
+import CodeLiftPage from "@/pages/CodeLift";
 // import { ErrorBoundary, RouteErrorBoundary } from "@/ErrorBoundary";
 
 function AppRouter() {
@@ -32,6 +33,7 @@ function AppRouter() {
             { path: RoutePaths.dashboard, element: <Dashboard /> },
             { path: RoutePaths.about, element: <AboutPage /> },
             { path: RoutePaths.features, element: <FeaturesPage /> },
+            { path: RoutePaths.codeLift, element: <CodeLiftPage /> },
             { path: RoutePaths.learn.guide, element: <GuidePage /> },
             { path: RoutePaths.learn.examples, element: <ExamplesPage /> },
             { path: RoutePaths.learn.bestPractices, element: <BestPracticesPage /> },
